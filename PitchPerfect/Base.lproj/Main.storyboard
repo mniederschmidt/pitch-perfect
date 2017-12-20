@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G1036" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="sqe-M2-JuN">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G1114" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="sqe-M2-JuN">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -23,21 +22,29 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vvr-Ln-0Sv">
-                                <rect key="frame" x="109.5" y="256" width="155" height="155"/>
-                                <state key="normal" image="RecordButton"/>
+                                <rect key="frame" x="110.5" y="256.5" width="155" height="155"/>
+                                <state key="normal" image="RecordButton">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
                                 <connections>
                                     <action selector="recordAudio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BSJ-QZ-cuj"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to Record" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SwG-uB-32Y">
-                                <rect key="frame" x="134" y="419" width="107" height="21"/>
+                                <rect key="frame" x="134" y="419.5" width="107" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wgs-l0-PtM">
-                                <rect key="frame" x="157" y="463" width="60" height="59"/>
-                                <state key="normal" image="Stop"/>
+                                <rect key="frame" x="156" y="465.5" width="64" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="64" id="7lz-Ai-WhD"/>
+                                    <constraint firstAttribute="height" constant="64" id="oUe-fo-eUI"/>
+                                </constraints>
+                                <state key="normal" image="Stop">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
                                 <connections>
                                     <action selector="stopRecording:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ENl-Pc-hRS"/>
                                 </connections>
@@ -45,15 +52,12 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Wgs-l0-PtM" firstAttribute="top" secondItem="SwG-uB-32Y" secondAttribute="bottom" constant="23" id="4Ey-9x-Klz"/>
-                            <constraint firstItem="Wgs-l0-PtM" firstAttribute="centerX" secondItem="SwG-uB-32Y" secondAttribute="centerX" id="4XX-Eb-AWA"/>
-                            <constraint firstItem="Vvr-Ln-0Sv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="72s-e3-no7"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Wgs-l0-PtM" secondAttribute="trailing" constant="142" id="8th-3y-EEb"/>
-                            <constraint firstItem="Vvr-Ln-0Sv" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="EJT-gX-bNH"/>
-                            <constraint firstItem="SwG-uB-32Y" firstAttribute="centerX" secondItem="Vvr-Ln-0Sv" secondAttribute="centerX" id="Nf7-XV-Lz5"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Wgs-l0-PtM" secondAttribute="bottom" constant="145" id="VoC-I8-jrg"/>
-                            <constraint firstItem="SwG-uB-32Y" firstAttribute="top" secondItem="Vvr-Ln-0Sv" secondAttribute="bottom" constant="8" id="ntl-J8-2Ft"/>
-                            <constraint firstItem="Wgs-l0-PtM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="141" id="zjc-ve-xt4"/>
+                            <constraint firstItem="Vvr-Ln-0Sv" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="B2v-3N-X9Y"/>
+                            <constraint firstItem="Wgs-l0-PtM" firstAttribute="centerX" secondItem="Vvr-Ln-0Sv" secondAttribute="centerX" id="Cu2-AE-8D7"/>
+                            <constraint firstItem="SwG-uB-32Y" firstAttribute="centerX" secondItem="Vvr-Ln-0Sv" secondAttribute="centerX" id="sN8-Me-k6u"/>
+                            <constraint firstItem="Wgs-l0-PtM" firstAttribute="top" secondItem="Vvr-Ln-0Sv" secondAttribute="bottom" constant="54" id="tzY-Cr-gko"/>
+                            <constraint firstItem="Vvr-Ln-0Sv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xJ8-UP-J0W"/>
+                            <constraint firstItem="SwG-uB-32Y" firstAttribute="top" secondItem="Vvr-Ln-0Sv" secondAttribute="bottom" constant="8" id="yQK-aJ-KJJ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="M19-hf-qbZ"/>
@@ -66,7 +70,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="628" y="54"/>
+            <point key="canvasLocation" x="628" y="53.523238380809602"/>
         </scene>
         <!--Play Sounds View Controller-->
         <scene sceneID="pEI-Jp-qD3">
@@ -79,7 +83,6 @@
                     <view key="view" contentMode="scaleToFill" id="iQI-gX-esg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NrP-lX-ZXe" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -11,6 +11,8 @@ import AVFoundation
 
 class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     
+    // MARK: Properties
+    
     var audioRecorder: AVAudioRecorder!
 
     @IBOutlet weak var recordButton: UIButton!
@@ -19,7 +21,13 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+//        print("viewDidLoad")
         stopRecordingButton.isEnabled = false
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+//        print("viewWillAppear")
     }
     
     @IBAction func recordAudio(_ sender: Any) {
@@ -32,6 +40,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
         let pathArray = [dirPath, recordingName]
         let filePath = URL(string: pathArray.joined(separator: "/"))
 //        print(filePath ?? "No file path")
+        print(filePath!)
         
         let session = AVAudioSession.sharedInstance()
         try! session.setCategory(AVAudioSessionCategoryPlayAndRecord, with:AVAudioSessionCategoryOptions.defaultToSpeaker)
@@ -72,6 +81,12 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
             let recordedAudioURL = sender as! URL
             playSoundsViewController.recordedAudioURL = recordedAudioURL
         }
+        
+//        if segue.identifier == "stopRecording",
+//            let playSoundsViewController = segue.destination as PlaySoundsViewController,
+//            let recordedAudioURL = sender as URL {
+//            
+//        }
     }
 }
 
