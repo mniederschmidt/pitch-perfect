@@ -21,7 +21,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     
     enum RecordingState { case recording, notRecording }
     
-    // MARK: Set up View
+    // MARK: Set Up View
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -79,12 +79,13 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     }
     
     // MARK: UI Functions
+    
     func configureUI(_ recordingState: RecordingState) {
         switch(recordingState) {
         case .recording:
-            recordingLabel.text = "Recording in Progress"
             stopRecordingButton.isEnabled = true
             recordButton.isEnabled = false
+            recordingLabel.text = "Recording in Progress"
         case .notRecording:
             recordButton.isEnabled = true
             stopRecordingButton.isEnabled = false

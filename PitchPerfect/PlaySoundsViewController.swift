@@ -29,7 +29,7 @@ class PlaySoundsViewController: UIViewController {
     
     enum ButtonType: Int { case slow = 0, fast, chipmunk, vader, echo, reverb }
     
-    // MARK: Stop Playing
+    // MARK: Stop Audio
 
     @IBAction func stopButtonPressed(_ sender: AnyObject) {
         stopAudio()
